@@ -46,8 +46,10 @@ function play(row, col) {
             } else {
                 joueur = (joueur === joueurs[0]) ? joueurs[1] : joueurs[0];
             }
+            document.querySelector('#error').innerHTML = ''
+
         } else {
-            document.querySelector('#error').innerHTML = 'clic ailleurs !'
+            document.querySelector('#error').innerHTML = 'clique ailleurs !'
             return
         }
         if ( joueur == joueurs[1]) {
