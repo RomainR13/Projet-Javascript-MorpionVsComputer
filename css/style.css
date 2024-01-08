@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    font-family: "Roboto-Regular";
+    background-color: azure;
+}
+h1{
+    text-align: center;
+    background-color: beige;
+    width: 500px;
+    margin: auto;
+    margin-top: 50px;
+    padding: 10px;
+    font-size: 60px;
+}
+
+.row {
+    display: flex;
+    width: fit-content;
+}
+
+.cell {
+    border: 3px solid black;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+
+}
+
+.pion{
+    width: 100px;
+    display: flex;
+
+}
+
+#rejouer{
+    text-align: center;
+    margin: 100px;
+}
+
+#error{
+    font-family: 'Roboto-Regular';
+    font-size: 30px;
+    text-align: center;
+    margin: 10px;
+}
+
+.bouton{
+    background-color: rgb(251, 251, 191);
+    cursor: pointer;
+    width: 200px;
+    height: 60px;
+    font-size: 30px;
+    padding: 10px;
+}
+
+#end{
+    font-family: 'Roboto-Regular';
+    font-size: 30px;
+}
+
+#gameContainer {
+  
+    width: fit-content;
+    margin: auto;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+@font-face {
+    font-family: Roboto-Regular;
+    src: url(../assets/font/Roboto-Regular.ttf);
+}
+
