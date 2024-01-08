@@ -7,8 +7,10 @@ let map = [
 isplayable = true
 let joueurs, joueur;
 let gameOver = false
+let cpuMode = false
 
-function Initialisating() {
+function initialisating(isCpuMode) {
+    cpuMode = isCpuMode
     // On cache le bouton "Rejouer"
     document.querySelector("#rejouer").style.visibility = "hidden";
     // On définit les joueurs
@@ -52,7 +54,7 @@ function play(row, col) {
             document.querySelector('#error').innerHTML = 'clique ailleurs !'
             return
         }
-        if ( joueur == joueurs[1]) {
+        if ( joueur == joueurs[1] && cpuMode) {
             cpu()
         }
     }
@@ -129,4 +131,3 @@ function displayMap() {
     });
 }
 
-Initialisating();
