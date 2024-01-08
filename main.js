@@ -9,10 +9,9 @@ let joueurs, joueur;
 let gameOver = false
 let cpuMode = false
 
-function initialisating(isCpuMode) {
+function initialisating(isCpuMode = cpuMode) {
+    
     cpuMode = isCpuMode
-    // On cache le bouton "Rejouer"
-    document.querySelector("#rejouer").style.visibility = "hidden";
     // On définit les joueurs
     joueurs = ['X', 'O'];
     // Et le joueur qui commence
@@ -39,11 +38,11 @@ function play(row, col) {
             displayMap();
             if (checking()) {
                 document.querySelector('#rejouer p').innerHTML = `Félicitations ! Le  ${joueur == "X" ? "Joueur 1" : "I-Robot"} Gagne !`
-                document.querySelector("#rejouer").style.visibility = "visible";
+                document.querySelector('#menuReplay').classList.remove('hidden')
                 gameOver = true;
             } else if (isGridFull()) {
                 document.querySelector('#rejouer p').innerHTML = 'Match nul !'
-                document.querySelector("#rejouer").style.visibility = "visible";
+                document.querySelector('#menuReplay').classList.remove('hidden')
                 gameOver = true
             } else {
                 joueur = (joueur === joueurs[0]) ? joueurs[1] : joueurs[0];
@@ -112,6 +111,8 @@ function isGridFull() {
 }
 
 function displayMap() {
+    document.querySelector('#menuReplay').classList.add('hidden')
+
     gameContainer.innerHTML = "";
     map.forEach((row, rowIndex) => {
         let rowContainer = document.createElement('div');

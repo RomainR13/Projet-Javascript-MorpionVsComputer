@@ -11,15 +11,15 @@
 <body>
     <h1>Le jeu du Morpion</h1>
     <div id="menu">
-        <button onclick="initialisating(true)">Mode 1 joueur</button>
-        <button onclick="initialisating(false)">Mode 2 joueur</button>
+        <button class="mode" onclick="initialisating(true)">Mode 1 joueur</button>
+        <button class="mode" onclick="initialisating(false)">Mode 2 joueurs</button>
 
     </div>
-    <div>
-        <div id="error"></div>
+    <div id="error"></div>
+    <div id="menuReplay" class="hidden">
         <div id="rejouer">
             <p id="end"></p>
-            <button type="button" class="bouton" onclick="Initialisating()">Rejouer</button>
+            <button type="button" class="bouton" onclick="initialisating()">Rejouer</button>
         </div>
     </div>
     <div id="gameContainer">
